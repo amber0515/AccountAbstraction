@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 pragma solidity ^0.8.12;
 
-contract OwnerManager {
+import "./BaseERC6551Account.sol";
+
+abstract contract OwnerManager is BaseERC6551Account {
     event AAOwnerSet(address owner);
 
     address internal owner;
@@ -20,10 +22,22 @@ contract OwnerManager {
     }
 
     function isOwner(address _owner) public view returns (bool) {
-        return owner == _owner;
+        return getOwner() == _owner;
     }
 
     function getOwner() public view returns (address) {
-        return owner;
+        (uint256 chainId, address tokenContract, uint256 tokenId) = token();
+        if (chainId != block.chainid) return address(0);
+
+        return IERC721(tokenContract).ownerOf(tokenId);
+    }
+
+    function isValidSigner(
+        address signer,
+        bytes calldata
+    ) external view returns (bytes4 magicValue) {
+        if (isOwner(signer)) {
+            return IERC6551Account.isValidSigner.selector;
+        }
     }
 }

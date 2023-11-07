@@ -187,7 +187,7 @@ contract SignatureManager is
                     userOp
                 ),
                 userOp.signature[33:]
-            ) != owner
+            ) != getOwner()
         ) {
             return SIG_VALIDATION_FAILED;
         } else {
@@ -222,7 +222,7 @@ contract SignatureManager is
                     userOp
                 ),
                 userOp.signature[33:]
-            ) != owner
+            ) != getOwner()
         ) {
             return uint256(bytes32(userOp.signature[1:33]));
         } else {

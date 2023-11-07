@@ -91,43 +91,43 @@ module.exports = {
   },
 
   networks: {
-    OKCMainnet: {
-      url: "https://exchainrpc.okex.org",
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 5000000,
-    },
-    BNBMainnet: {
-      url: "https://bsc.publicnode.com",
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 5000000,
-    },
-    AVAXMainnet: {
-      url: "https://avalanche.blockpi.network/v1/rpc/public",
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 5000000,
-    },
+    // OKCMainnet: {
+    //   url: "https://exchainrpc.okex.org",
+    //   accounts: [process.env.PRIVATE_KEY],
+    //   gas: 5000000,
+    // },
+    // BNBMainnet: {
+    //   url: "https://bsc.publicnode.com",
+    //   accounts: [process.env.PRIVATE_KEY],
+    //   gas: 5000000,
+    // },
+    // AVAXMainnet: {
+    //   url: "https://avalanche.blockpi.network/v1/rpc/public",
+    //   accounts: [process.env.PRIVATE_KEY],
+    //   gas: 5000000,
+    // },
 
-    ETHMainnet: {
-      url: "https://rpc.ankr.com/eth",
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 5000000,
-    },
-    ARBMainnet: {
-      url: "https://arb1.arbitrum.io/rpc",
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 50000000,
-    },
-    OPMainnet: {
-      url: "https://optimism.meowrpc.com",
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 5000000,
-    },
-    PolygonMainnet: {
-      url: "https://polygon.llamarpc.com",
-      accounts: [process.env.PRIVATE_KEY],
-      gas: 5000000,
-      gasPrice: 240000000000
-    },
+    // ETHMainnet: {
+    //   url: "https://rpc.ankr.com/eth",
+    //   accounts: [process.env.PRIVATE_KEY],
+    //   gas: 5000000,
+    // },
+    // ARBMainnet: {
+    //   url: "https://arb1.arbitrum.io/rpc",
+    //   accounts: [process.env.PRIVATE_KEY],
+    //   gas: 50000000,
+    // },
+    // OPMainnet: {
+    //   url: "https://optimism.meowrpc.com",
+    //   accounts: [process.env.PRIVATE_KEY],
+    //   gas: 5000000,
+    // },
+    // PolygonMainnet: {
+    //   url: "https://polygon.llamarpc.com",
+    //   accounts: [process.env.PRIVATE_KEY],
+    //   gas: 5000000,
+    //   gasPrice: 240000000000
+    // },
     hardhat: {
       // forking: {
       //   allowUnlimitedContractSize: true,
